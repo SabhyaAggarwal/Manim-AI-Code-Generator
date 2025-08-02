@@ -1,0 +1,22 @@
+{
+  "name": "manim-ai-code-generator",
+  "version": "1.0.0",
+  "description": "Manim AI Code Generator with secure API integration",
+  "main": "manim_generator.html",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [
+    "manim",
+    "ai",
+    "code-generator",
+    "gemini",
+    "netlify"
+  ],
+  "author": "Sabhya Aggarwal",
+  "license": "MIT",
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}
