@@ -122,8 +122,11 @@
   </div>
 
   <div id="message-box"></div>
+
   <script>
-    URL='https://illustrious-dolphin-b31b9c.netlify.app/.netlify/functions/gemini-proxy';
+    // Change this variable to update the proxy endpoint
+    const GEMINI_PROXY_URL = "https://illustrious-dolphin-b31b9c.netlify.app/.netlify/functions/gemini-proxy";
+
     async function sendPrompt() {
       const prompt = document.getElementById("prompt").value.trim();
       const output = document.getElementById("output");
@@ -132,13 +135,13 @@
       output.textContent = "Generating... Please wait.";
       copyButton.style.display = "none";
       downloadButton.style.display = "none";
-      
+
       try {
         if (!prompt.trim()) {
           throw new Error("Please enter a prompt to generate code.");
         }
-        
-        const response = await fetch(URL, {
+
+        const response = await fetch(GEMINI_PROXY_URL, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -229,5 +232,3 @@
   </script>
 </body>
 </html>
-
-
